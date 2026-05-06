@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caso: NovaCraft Manufacturing</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d0d0d;
+    --dark: #141414;
+    --card: #1a1a1a;
+    --border: #2a2a2a;
+    --accent: #c8f542;
+    --accent2: #f5a623;
+    --accent3: #e84f4f;
+    --white: #f0ede8;
+    --muted: #888;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .card {
+    max-width: 760px;
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--dark);
+  }
+
+  .card-header {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .empresa-name {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .sector-pill {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--accent2);
+    color: var(--accent2);
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat {
+    padding: 1.2rem 2rem;
+    border-right: 1px solid var(--border);
+  }
+  .stat:last-child { border-right: none; }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent3);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+  .card-body {
+    padding: 2.5rem;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .narrative {
+    font-size: 0.95rem;
+    color: #c5c2bc;
+    line-height: 1.85;
+  }
+
+  .narrative p + p {
+    margin-top: 1.1rem;
+  }
+
+  .narrative strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .card-footer {
+    padding: 1.2rem 2.5rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <div class="card-header">
+    <div>
+      <div class="eyebrow">Caso de análisis · Dinámica grupal</div>
+      <div class="empresa-name">NovaCraft Manufacturing</div>
+    </div>
+    <div class="sector-pill">Manufactura</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-number">38%</div>
+      <div class="stat-label">Caída en productividad<br>últimos 18 meses</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">4.2x</div>
+      <div class="stat-label">Tiempo en resolver<br>incidencias vs. industria</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">29%</div>
+      <div class="stat-label">Rotación de personal<br>en el último año</div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="section-label">El escenario</div>
+    <div class="narrative">
+      <p>NovaCraft Manufacturing es una empresa mediana de manufactura de componentes electrónicos con 85 empleados. A pesar de tener contratos estables y buena demanda, <strong>su eficiencia operativa ha caído drásticamente en los últimos 18 meses.</strong></p>
+      <p>Los supervisores de planta no pueden tomar ninguna decisión sin pasar por el gerente de operaciones, <strong>Rafael Medina</strong>, quien insiste en aprobar hasta los cambios más pequeños en el piso de producción. Cuando ocurre una falla en la línea, el equipo espera instrucciones en vez de actuar — lo que genera <strong>paradas de hasta 4 horas</strong> que costarían 20 minutos si el equipo pudiera decidir.</p>
+      <p>Los operarios más experimentados, frustrados por no tener voz, han comenzado a <strong>"hacer lo mínimo requerido"</strong>. Tres de los mejores técnicos renunciaron este año. Nuevas ideas para mejorar procesos se quedan sin respuesta por semanas.</p>
+      <p>La directora general, <strong>Ana Colón</strong>, reconoce el problema pero no sabe cómo cambiar la cultura sin perder el control de calidad. Rafael, por su parte, teme que dar autonomía lleve a errores costosos. El equipo está fragmentado: algunos quieren más responsabilidad; otros ya no confían en que la empresa vaya a cambiar.</p>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <span>Caso ficticio · Fines académicos</span>
+    <span>Empoderamiento Organizacional · UAGM Gurabo</span>
+  </div>
+
+</div>
+
+</body>
+</html>
